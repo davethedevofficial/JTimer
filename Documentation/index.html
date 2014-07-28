@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully customizable and elegent timer that anybody can use. Plus it's responsive and plays well with bootstrap and other frameworks.">
+    <meta name="author" content="Rendell Pierre">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <title>JTimer - Elegant Countdown Timer | Docs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="assets/js/modernizr.custom.js"></script>
+    
+  </head>
+
+  <body> 
+	<div id="headerwrap" style="background:url('assets/img/doc-bg.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h1>JTimer</h1>
+					<h2>Documentation</h2>
+					<div class="spacer"></div>
+					<i class="fa fa-angle-down"></i>
+				</div>
+			</div><!-- row -->
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+
+	<!-- WELCOME SECTION -->
+    <div class="container" >
+      <div class="row mt">
+      	<div class="">
+	        <h1>Table of Content</h1>
+	        <hr>
+	        <p>
+	        	<ul>
+	        		<li><a href="#gettingStarted">Getting Started</a></li>
+	        		<li><a href="#timerTypes">Timer Types</a></li>
+	        		<li><a href="#breakdown">Breakdown</a></li>
+	        		<li><a href="#styling">Styling</a></li>
+	        		<li><a href="#bootstrap">Using JTimer with bootstrap</a></li>
+	        		<li><a href="#animate">Using JTimer with animate.css</a></li>
+	        		<li><a href="#contact">Need More Help?</a></li>
+	        	</ul>
+	        </p>
+      	</div> 
+      </div><!-- /row -->
+    </div><!-- /.container --> 
+
+	<!-- Getting Started SECTION -->
+	    <div class="container">
+	      <div class="row mt">
+	      	<div id="gettingStarted" class="col-lg-12">
+		        <h1>Getting Started</h1>
+		        <hr>
+		        <p>JTimer was put together in a way that makes getting started very easy.</p>
+		        <ol>
+		        	<li>Link the jtimer.css</li>
+		        		<pre style="text-align:left;">< head><br>	...<br>	<b>< link rel="stylesheet" type="text/css" href="css/jtimer.css"></b><br>	...<br>< /head></pre>
+		        	<li>Link the jtimer.js</li>
+		        		<pre style="text-align:left;">< body><br>	...<br>	<b>< script type="text/javascript" src="js/jtimer.min.js">< /script></b><br>< /body></pre>
+		        	<li>Include the five div tags in your html</li>
+		        		<pre style="text-align:left;">< body><br>	...<br>	<b>< div id="timer"><br>		< div id="dayTicker">< /div><br>		< div id="hourTicker">< /div><br>		< div id="minuteTicker">< /div><br>		< div id="secondTicker">< /div><br>	< /div></b> <br>	...<br>< /body></pre>
+		        	<li>Include one line of JavaScript beneath the jtimer.js link</li>
+		        		<pre style="text-align:left;">< body><br>	...<br>	< script type="text/javascript" src="js/jtimer.min.js">< /script><br>	< script type="text/javascript"><br>		<b>timer = new JTIMER.Timer("timer", "Circular", new Date("December 03, 2014 12:00:00"));</b><br>	< /script><br>< /body></pre>
+		        </ol>
+		        <br>
+		        <p><b>NB.</b> Open it in your favorite browser (I like chrome) and enjoy the beautiful default timer. Now you can <a href="#styling">style</a> it to make it fit your design. <a href="#styling">Styling</a> is easy as…</p>
+		        <pre>timer.tickerStyle.fontColor = "rgba (109,164,145, 1)";</pre>
+		        <p>to change the font color. See <a href="#styling">styling</a> for more styling options.</p>
+
+	      	</div>
+	    </div><!-- /.container -->
+
+	<!-- Timer Types SECTION -->
+    <div id="timerTypes" class="container">
+      <div class="row mt">
+      	<div class="col-lg-12">
+	        <h1>Timer Types</h1>
+	        <hr>
+	        <p>There are four Timer Types to choose from and all of them are customizable. There are Circular, Box, Bar and Line. When initializing your timer you can specify the timer type like this…
+			</p>
+	        <pre>timer = new JTIMER.Timer("timer", <b>"Circular"</b> , new Date("October 28, 2014 5:33:00"));</pre>
+      	</div>
+      </div><!-- /row -->
+    </div><!-- /.container -->
+
+    <!-- PORTFOLIO SECTION -->
+    <div id="portfolio">
+    	<div class="container"
+	    	<div class="row mt">
+				<ul class="grid effect-2" id="grid">
+					<li><a href="#"><img src="assets/img/portfolio/JTimer Circular.png"></a><div style="width:100%; margin-top:10px; text-align:center;"><b>Circular</b> Ticker</div></li>
+					<li><a href="#"><img src="assets/img/portfolio/JTimer Box.png"></a><div style="width:100%; margin-top:10px; text-align:center;"><b>Box</b> Ticker</div></li>
+					<li><a href="#"><img src="assets/img/portfolio/JTimer Bar.png"></a><div style="width:100%; margin-top:10px; text-align:center;"><b>Bar</b> Ticker</div></li>
+					<li><a href="#"><img src="assets/img/portfolio/JTimer Line.png"></a><div style="width:100%; margin-top:10px; text-align:center;"><b>Line</b> Ticker</div></li>
+				</ul>
+	    	</div><!-- row -->
+	    </div><!-- container -->
+    </div><!-- portfolio -->
+
+	    <!-- Breakdown SECTION -->
+	    <div id="breakdown" class="container">
+	      <div class="row mt">
+	      	<div class="col-lg-12">
+		        <h1>Breakdown</h1>
+		        <hr>
+		        <p>After the <a href="#gettingStarted">setup</a> you should learn what makes up the timer because it will help you when you are ready to <a href="#styling">style</a>. <br> The JTimer Countdown Timer is solely made up of tickers.
+				</p>
+				<p>Here is a image of the ticker I am talking about... 
+				</p>
+	      		<div class="col-lg-12">
+					<img class="img-responsive thumbnail" src="assets/img/breakdown.png">
+				</div>
+				<p><b>NB.</b> In the image above you can see a ticker (this one is the hourTicker) and the parts that can be styled.</p>
+
+				<p>JTimer Countdown Timer is made up of tickers. The tickers are "dayTicker", "hourTicker"(the one clearly shown in the image), "minuteTicker" and "secondTicker". With this setup when <a href="#styling">styling</a> you can target the general ticker (which is all the tickers) or the specific ticker ("dayTicker", "hourTicker", "minuteTicker" or "secondTicker").
+				</p>
+	      	</div>
+	      </div><!-- /row -->
+	    </div><!-- /.container -->
+	    
+
+	    <!-- Styling SECTION -->
+	    <div id="styling" class="container">
+	      <div class="row mt">
+	      	<div class="col-lg-12">
+		        <h1>Styling</h1>
+		        <hr>
+		        <p>It's time to explain the styling. Each ticker has their own ticker style, but at the same time shares the general ticker style. To prevent conflict the styles cascade like in css.
+				</p>
+
+				<div class="col-lg-12">
+					<img class="img-responsive thumbnail" src="assets/img/styling_default.png">
+				</div>
+				<p><b>NB.</b> This is what we are starting off with; default ticker styles on a blue background.</p>
+
+		        <p>Okay. Let's say we want all the tickers to have the same style (a blue progress color). That's simple. We just change up the properties of the "tickerStyle". Let me show you what I am talking about...
+				</p>
+				
+		        <pre>//After we have initialized our timer.<br>timer = new JTIMER.Timer("timer", "Circular" , new Date("October 28, 2014 5:33:00"));<br><br>//We will change the progress color like this<br><b>timer.tickerStyle.progressColor = "rgba(49,108,179,1)";</b></pre>
+				
+				<div class="col-lg-12">
+					<img class="img-responsive thumbnail" src="assets/img/styling_after_change1.png">
+				</div>
+				<p><b>NB.</b> This is the result.</p>
+
+				<p>Yes. Looking good... But! Say we want all the progress color blue, but we want the secondTicker red. Thats where the specific ticker styles (dayTicker, hourTicker, minuteTicker, secondTicker) come into the picture. Let me show you and stop talking... or typing 0_o
+				</p>
+				
+		        <pre>//After we have initialized our timer.<br>timer = new JTIMER.Timer("timer", "Circular" , new Date("October 28, 2014 5:33:00"));<br><br>//We will change the progress color of all the tickers<br>timer.tickerStyle.progressColor = "rgba(49,108,179,1)";<br><br>//Then we will change the progress color to red for the second ticker ONLY<br><b>timer.secondTickerStyle.progressColor = "rgba(179,49,49,1)";</b></pre>
+				
+				<div class="col-lg-12">
+					<img class="img-responsive thumbnail" src="assets/img/styling_after_change2.png">
+				</div>
+				<p><b>NB.</b> NOW! This is the results</p>
+
+				<p>So same process is used to change the font, background color, etc. You can now change the minute ticker to green and the hour ticker to yellow and the day ticker to whatever color. <b>Go Crazy!</b>
+				</p>
+
+		        <br>
+				<p>All possible properties for the ticker styles:</p>
+		        <pre>/* tickerStyle */<br><br>timer.tickerStyle.margin = 10;	//Changes the margin<br><br>timer.tickerStyle.backgroundColor ="rgba(0,0,0,0.5)";	//Changes the background color<br><br>timer.tickerStyle.font = "Arial";	//Changes the font of the text<br><br>timer.tickerStyle.fontColor = "rgba(49,108,179,1)";	//Changes the font color<br><br>timer.tickerStyle.fontSize = "80px";	//Changes the font size<br><br>timer.tickerStyle.progressColor = "rgba(49,108,179,1)";	//Changes the Progress Color<br><br>timer.tickerStyle.progressWidth = 80;	//Changes the Progress Width<br><br>timer.tickerStyle.progressBackgroundColor = "rgba(49,108,179,1)";	//Changes the Progress Background Color<br><br>timer.tickerStyle.progressBackgroundWidth = 50;	//Changes the Progress Background Width</pre>
+		        <p><b>NB.</b> You can replace "<b>tickerStyle</b>" with "<b>dayTickerStyle</b>, <b>hourTickerStyle</b>, <b>minuteTickerStyle</b> OR <b>secondTickerStyle</b>"</p>
+	      	</div>
+	      </div><!-- /row -->
+	    </div><!-- /.container -->
+
+		<!-- Bootstrap SECTION -->
+	    <div id="bootstrap" class="container">
+	      <div class="row mt">
+	      	<div class="col-lg-12">
+		        <h1>Bootstrap</h1>
+		        <hr>
+		        <p>You need bootstrap.css(or bootstrap.min.css). Get it from <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> 
+				</p>
+
+		        <p>After you had <a href="#gettingStarted">setup</a> JTimer successfully and downloaded Bootstrap and locate the bootstrap.css(or bootstrap.min.css) file you just need to:
+				</p>
+				<ol>
+		        	<li>First, link bootstrap.css(in this example I used bootstrap.min.css)</li>
+		        		<pre style="text-align:left;">< head><br>	...<br>	<b>< link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"></b><br>	...<br>< /head></pre>
+		        	<li>Make the time div a 'row' by adding the 'row' class to the timer div</li>
+		        		<pre style="text-align:left;">< body><br>	...<br>	< div id="timer" <b>class="row"</b>><br>		< div id="dayTicker">< /div><br>		< div id="hourTicker">< /div><br>		< div id="minuteTicker">< /div><br>		< div id="secondTicker">< /div><br>	< /div> <br>	...<br>< /body></pre>
+		        	<li>Now make dayTicker, hourTicker, minuteTicker, secondTicker divs 'cols' of 3 at medium(md) screen and up by adding the class "col-md-3" in each.</li>
+		        		<pre style="text-align:left;">< body><br>	...<br>	< div id="timer" class="row"><br>		< div id="dayTicker" <b>class="col-md-3"</b>>< /div><br>		< div id="hourTicker" <b>class="col-md-3"</b>>< /div><br>		< div id="minuteTicker" <b>class="col-md-3"</b>>< /div><br>		< div id="secondTicker" <b>class="col-md-3"</b>>< /div><br>	< /div> <br>	...<br>< /body></pre>
+		        	<li>Let'us add a next 'col' class to make it more responsive. We are adding "col-xs-6" to each of the tickers so when the screen is a small screen or extra small screen it will display two tickers in one row.</li>
+		        		<pre style="text-align:left;">< body><br>	...<br>	< div id="timer" class="row"><br>		< div id="dayTicker" class="<b>col-xs-6</b> col-md-3">< /div><br>		< div id="hourTicker" class="<b>col-xs-6</b> col-md-3">< /div><br>		< div id="minuteTicker" class="<b>col-xs-6</b> col-md-3">< /div><br>		< div id="secondTicker" class="<b>col-xs-6</b> col-md-3">< /div><br>	< /div> <br>	...<br>< /body></pre>
+		        </ol>
+		        <p>Not too clear? <a href="http://bootstrap.com">Learn more</a> about Bootstrap or <a href="#contact">contact me.</a></p>
+	      	</div>
+	      </div><!-- /row -->
+	    </div><!-- /.container -->
+
+		<!-- Animate SECTION -->
+	    <div id="animate" class="container">
+	      <div class="row mt">
+	      	<div class="col-lg-12">
+		        <h1>Animate.css</h1>
+		        <hr>
+		        <p>After you had <a href="#gettingStarted">setup</a> JTimer successfully you just need to:
+				</p>
+				<ol>
+		        	<li>Download <a href="http://daneden.github.io/animate.css/">Animate.css</a>, it's AWESOME. Then link it.</li>
+		        		<pre style="text-align:left;">< head><br>	...<br>	<b>< link rel="stylesheet" type="text/css" href="css/animate.css"></b><br>	...<br>< /head></pre>
+		        	<li>Then in the html just add a class attribute to the timer div (< div id="timer" class="">) and place the values "animated" and the animation "pulse"(I used pulsed in this case).</li>
+		        		<pre style="text-align:left;">< body><br>	...<br>	< div id="timer" <b>class="animated pulse"</b>><br>		< div id="dayTicker">< /div><br>		< div id="hourTicker">< /div><br>		< div id="minuteTicker">< /div><br>		< div id="secondTicker">< /div><br>	< /div> <br>	...<br>< /body></pre>
+		        </ol>
+		        <p>And that's it.</p>
+	      	</div>
+	      </div><!-- /row -->
+	    </div><!-- /.container --> 
+
+	<!-- CALL TO ACTION -->
+	<div id="call">
+		<div class="container">
+			<div class="row">
+				<h3>JTimer Is On Envato!</h3>
+				<div class="col-lg-8 col-lg-offset-2">
+					<p>I built JTimer because I was looking for a countdown timer for this project I was working on and came across no elegant and easy to use solution. I did not really want to sell it at first, but I am in need of a new PC and I guessed there might be someone out there that may find it very useful. Maybe it's you ;)</p>
+					<p><a href="http://codecanyon.net" target="_blank" class="btn btn-green btn-lg">Get It Now</a></p>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- Call to action -->
+	
+	<!-- SOCIAL FOOTER -->
+	<section id="contact"></section>
+	<div id="sf">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 dg">
+					<h4 class="ml">FACEBOOK</h4>
+					<p class="centered"><a href="http://facebook.com/rendellpierre1"><i class="fa fa-facebook"></i></a></p>
+					<p class="ml">> Become A Friend</p>
+				</div>
+				<div class="col-sm-4 lg">
+					<h4 class="ml">LinkedIn</h4>
+					<p class="centered"><a target="_blank" href="http://www.linkedin.com/pub/rendell-pierre/75/a1b/351/"><i class="fa fa-linkedin"></i></a></p>
+					<p class="ml">> Connect</p>
+				</div>
+				<div class="col-sm-4 dg">
+					<h4 class="ml">GOOGLE +</h4>
+					<p class="centered"><a target="_blank" href="http://google.com/+RendellPierre"><i class="fa fa-google-plus"></i></a></p>
+					<p class="ml">> Add Us To Your Circle</p>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- Social Footer -->
+	
+	<!-- CONTACT FOOTER -->
+	<div id="cf">
+		<div class="container">
+			<div class="row"> 
+				<div class="col-xs-12" style="text-align:center">
+					<h4>Contact<br/></h4>
+					<br>
+					<p>
+						I am chilling in Grenada
+					</p>
+					<p>
+						Email: <a href="mailto:info@rendellpierre.com">info@rendellpierre.com</a>
+					</p>
+					<p>Made with <span class="fa fa-heart" style="color:#ff819c"></span> and JavaScript and a little css :)</p>
+				</div><!--col-lg-4-->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- Contact Footer -->
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+	<script src="assets/js/masonry.pkgd.min.js"></script>
+	<script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/classie.js"></script>
+	<script src="assets/js/AnimOnScroll.js"></script>
+	<script>
+		new AnimOnScroll( document.getElementById( 'grid' ), {
+			minDuration : 0.4,
+			maxDuration : 0.7,
+			viewportFactor : 0.2
+		} );
+	</script>
+  </body>
+</html>

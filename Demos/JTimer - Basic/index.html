@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JTimer - Basic Demo</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JTimer - A fully customizable and elegent timer that anybody can use. Plus it's responsive and plays well with bootstrap and other frameworks.">
+    <meta name="author" content="Rendell Pierre - rendellpierre.com">
+    <link rel="shortcut icon" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/jtimer.css">
+
+	<style type="text/css">
+		/*Demo CSS*/
+		body{
+			background-image: url('img/bg.jpg');
+		}
+		#timer {
+			width: 80%;
+			height: 300px;
+			margin-left: 10%;
+			margin-top: 300px;
+		}
+
+		#timer div{
+			width: 24%;
+			height: auto;
+			float: left;
+			padding-right: 1%;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+		<div id="dayTicker"></div><!--dayTicker-->
+		<div id="hourTicker"></div><!--hourTicker-->
+		<div id="minuteTicker"></div><!--minuteTicker-->
+		<div id="secondTicker"></div><!--secondTicker-->
+	</div><!--timer-->
+
+	<script type="text/javascript" src="js/jtimer.min.js"></script>
+	<script type="text/javascript">
+		//timer types are "Circular | Bar | Box | Line"
+		timer = new JTIMER.Timer("timer", "Circular", new Date("December 03, 2014 12:00:00"));
+
+		//timer ticker styling goes here... 
+
+		/* Refer to the documentation for all properties and valid values for styling
+		 * Documentation can be found:
+		 *		1. In the docs folder in the package
+		 *		2. Or at jtimer.rendellpierre.com/documentation
+		 */
+		
+	</script>
+</body>
+</html>

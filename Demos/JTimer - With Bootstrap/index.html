@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JTimer - With Bootstrap</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JTimer - A fully customizable and elegent timer that anybody can use. Plus it's responsive and plays well with bootstrap and other frameworks.">
+    <meta name="author" content="Rendell Pierre - rendellpierre.com">
+    <link rel="shortcut icon" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jtimer.css">
+
+	<style type="text/css">
+		/*Demo CSS*/
+		body{
+			background-color: #6ba7ee;
+		}
+
+		#timer{
+			margin-top: 200px;
+		}
+
+		#timer div{
+			margin-bottom: 20px;
+		}
+
+		.note{
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			font-size: 1.2em;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div id="timer" class="row">
+			<div id="dayTicker" class="col-xs-6 col-md-3"></div><!-- dayTicker -->
+			<div id="hourTicker" class="col-xs-6 col-md-3"></div><!-- hourTicker -->
+			<div id="minuteTicker" class="col-xs-6 col-md-3"></div><!-- minuteTicker -->
+			<div id="secondTicker" class="col-xs-6 col-md-3"></div><!-- secondTicker -->
+		</div><!-- timer --> 
+	</div><!-- container -->
+
+	<div class="note">
+		<p><b>NB.</b> Resize the browser and you will see the responsiveness</p>
+	</div><!--Note-->
+	 
+	<script type="text/javascript" src="js/jtimer.min.js"></script>
+	<script type="text/javascript">
+		//timer types are "Circular | Bar | Box | Line"
+		timer = new JTIMER.Timer("timer", "Circular", new Date("December 03, 2014 12:00:00"));
+		//timer ticker styling goes here... 
+
+		/* Refer to the documentation for all properties and valid values for styling
+		 * Documentation can be found:
+		 *		1. In the docs folder in the package
+		 *		2. Or at jtimer.rendellpierre.com/documentation
+		 */
+		
+	</script>
+</body>
+</html>
