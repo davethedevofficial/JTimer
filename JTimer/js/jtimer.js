@@ -3,8 +3,9 @@
 |*	Artist: Rendell Pierre																*|
 |*	Artwork's Name: JTIMER																*|
 |*  Version: v1.0																		*|
-|*	Artwork's Description: A fully customizable and elegent timer that anybody can use.	*|
-|*	                     Plus it's responsive and plays well with bootstrap.			*|
+|*	Artwork's Description: A fully changeable and elegant timer that anybody can use.	*|
+|*	                     Plus it's responsive and plays well with bootstrap. 			*|
+|*	                     And...It's Open Source.							 			*|
 \****************************************************************************************/
 
 /**************** Global Namespace Object *************/
